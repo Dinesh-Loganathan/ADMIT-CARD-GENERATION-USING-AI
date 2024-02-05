@@ -1,24 +1,18 @@
 # Admit Card System
-The Admit Card System is a Flask-based web application that facilitates the generation of admit cards for students or candidates. It provides functionalities for uploading user details, verifying identity through OTP (One-Time Password), generating QR codes, and creating PDF admit cards.
+This Flask application serves as an Admit Card generation system, allowing users to enter their details, verify their identity through photo and signature, and generate a downloadable Admit Card in PDF format.
 
 ## Features
-***User Registration:*** Users can enter their details including name, date of birth, address, gender, email, phone number, and Aadhar number.
+OTP Verification: Utilizes Twilio Verify service to verify user identity through phone number OTP.
 
-***Image Verification:*** The system verifies user-provided images such as photos and signatures.
+Face and Signature Verification: Validates user-submitted photos and signatures for identity verification.
 
-***OTP Verification:*** Twilio Verify service is integrated for OTP verification during user registration.
-
-***QR Code Generation:*** QR codes containing user information are generated.
-
-***PDF Admit Card Generation:*** Admit cards are created in PDF format, containing user details and a QR code.
-
-***MySQL Database Integration:*** User data is stored in a MySQL database.
+QR Code Generation: Generates QR codes containing user information for easy access and sharing.
 
 ## Installation
 Clone the repository:
 
 ```bash
-git clone https://github.com/your_username/admit-card-system.git
+git clone https://github.com/your-username/admit-card-system.git
 ```
 Install the required Python packages:
 
@@ -27,17 +21,8 @@ pip install -r requirements.txt
 ```
 ### Set up MySQL database:
 
-Create a database named admit_card_system.
-Update the MySQL database configuration in the app.py file.
-
-### Set up Twilio:
-
-Register and obtain Twilio credentials (Account SID, Auth Token, Verify SID).
-Update the Twilio credentials in the app.py file.
-
-### Set up Tesseract OCR:
-
-Install Tesseract OCR and set the correct path in the app.py file.
+Create a MySQL database named admit_card_system.
+Update the MySQL connection details in the app.py file.
 
 ## Run the application:
 
@@ -48,30 +33,27 @@ python app.py
 The application will be accessible at http://localhost:5000/.
 
 ## Usage
-1. Visit the homepage (/) to get started.
+Access the application through the provided URL.
 
-2. Enter user details and upload images for photo, signature, and Aadhar card.
-   
-3. Verify OTP received on the provided phone number.
+Navigate to the respective sections for entering details, generating Admit Cards, and more.
 
-4. Admit card will be generated upon successful registration.
+Follow the on-screen instructions for OTP verification and document submission.
+
+Download the generated Admit Card in PDF format.
 
 ## Dependencies
-- Python 3.x
-- Flask
-- OpenCV
-- numpy
-- PIL (Python Imaging Library)
-- mysql-connector-python
-- qrcode
-- keras
-- fpdf
-- pytesseract
-- twilio
-- tensorflow
-
+Flask
+OpenCV
+NumPy
+Pillow
+MySQL Connector
+PyTesseract
+Twilio
+Keras
+TensorFlow
 ## Contributors
-Harishh A, Swetha M, Sridevi T & Dinesh L
+Harishh A
+Swetha M, Dinesh L &Sridevi T
 
 
 Feel free to contribute to the project by submitting issues or pull requests.
